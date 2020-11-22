@@ -9,7 +9,7 @@ parser.add_argument("-l", "--letter_task", help="get letter of task")
 parser.add_argument("-p", "--programm", help="input task code")
 args = parser.parse_args()
 # call  python3 argparser.py -l J -p code = Namespace(letter_task='J', number_conftest='190', programm='code')
-print(args)
+
 
 
 
@@ -22,6 +22,8 @@ parser.add_argument("-f", "--flag", help="input task code", action="store_const"
 parser.add_argument("-s", "--store", help="try get True", action="store_true")
 # аналогично, флаг передан подставит True
 # call python3 argparser.py -s = Namespace(store=True)
+
+
 parser.add_argument("-n", "--numbers", help="get values for one argumnent", nargs=2)
 # можно положить в 1 аргумент несколько значений
 # call python3 argparser.py -n 12 50 = Namespace(numbers=['12', '50'])
@@ -29,8 +31,8 @@ parser.add_argument("-ch", "--choices", help="choice argument only from parametr
 # call python3 argparser.py -ch 12 =  invalid choice: '12' (choose from '1', '2')
 
 args = parser.parse_args()
-print(args)
-#
+
+
 
 
 # позиционные - должны быть переданны в строгом порядке, как вычитываются
